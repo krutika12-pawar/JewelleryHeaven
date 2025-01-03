@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <div id="signuppopup-placeholder"></div>
+    <div id="signinpopup-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar-placeholder").load("navbar.html", function () {
+                document.dispatchEvent(new Event('navbarLoaded'));
+            });
+            $("#signuppopup-placeholder").load("signup-popup.html");
+            $("#signinpopup-placeholder").load("signin-popup.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+
+    <header class="product-collection">
+        <h1>Earring Collection</h1>
+        <p>Timeless Treasures: Discover Our Classic Earring Collection</p>
+    </header>
+
+    <div class="collection-container">
+        <div class="collection-item" data-product-id="19">
+            <img src="earrings8.webp" alt="Earring 1">
+            <h3>South Indian style gold earring</h3>
+            <p>Price: &pound;400</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="20">
+            <img src="earringbanner.webp" alt="Earring 2">
+            <h3>Gold and Diamond Earring</h3>
+            <p>Price: &pound;150</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="21">
+            <img src="earrings7.webp" alt="Earring 3">
+            <h3>Gold and Diamong Studs</h3>
+            <p>Price: &pound;200</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="22">
+            <img src="earrings11.jpg" alt="Earring 4">
+            <h3>Diamond earrings</h3>
+            <p>Price: &pound;250</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="23">
+            <img src="earrings4.jpg" alt="Earring 5">
+            <h3>Gold and Diamond tops</h3>
+            <p>Price: &pound;140</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="24">
+            <img src="earrings16.jpg" alt="Earring 6">
+            <h3>Floral design earring</h3>
+            <p>Price: &pound;150</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- product detail pop up -->
+    <div id="productPopup" class="product-popup">
+        <div class="product-popup-content">
+            <span class="close">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="cart.js"></script>
+    <script src="product-detail.js"></script>
+    <script type="module" src="signup.js"></script>
+    <script src="product.js"></script>
+
+</body>
+
+</html>

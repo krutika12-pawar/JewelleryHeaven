@@ -1,0 +1,157 @@
+.signupPopup,
+.signinPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.popup-content {
+    background: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: auto;
+}
+
+.popup-image {
+    /* background: linear-gradient(135deg, #f4c2c2, #ffe5b4); */
+    /* background: linear-gradient(135deg, #d4a373, #ffffff); */
+    background: linear-gradient(135deg, #ece4e0, #d6cfc9);
+    padding: 20px;
+}
+
+.form-content {
+    padding: 20px;
+}
+
+.close {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4a373;
+    float: right;
+    cursor: pointer;
+    position: relative;
+}
+
+.close:hover {
+    color: #b8835b;
+}
+
+.page_heading h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.page_heading p {
+    color: #555;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.signup_container {
+    margin-top: 20px;
+}
+
+.input-control {
+    margin-bottom: 15px;
+}
+
+.input-control label {
+    font-weight: 500;
+    color: #444;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-control input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+.input-control input:focus {
+    border-color: #d4a373;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.submit_button {
+    /* background: linear-gradient(135deg, #d4a373, #b8835b); */
+    background: linear-gradient(135deg, #b89c8b, #a6856d);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit_button:hover {
+    background: linear-gradient(135deg, #b8835b, #8f6538);
+}
+
+.signin-option {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.signin-option p {
+    font-weight: 500;
+    color: #666;
+}
+
+.google-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #444;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.google-signin:hover {
+    color: #d4a373;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+    }
+
+    .page_heading h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.error-message {
+    color: red;
+}

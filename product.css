@@ -1,0 +1,224 @@
+body,
+html {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+}
+
+/* collection  css */
+
+.product-collection {
+    text-align: center;
+    padding: 10px;
+    background-color: #ece4e0;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product-collection p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.bridal-collection h1 {
+    margin: 0;
+}
+
+.collection-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.collection-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.collection-item img {
+    height: 70%;
+    width: 80%;
+    border-radius: 8px;
+    max-height: 100%;
+}
+
+.collection-item h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.collection-item p {
+    color: #888;
+}
+
+/* wishlist icon css */
+
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ccc;
+    font-size: 24px;
+    transition: color 0.3 ease;
+    cursor: pointer;
+
+}
+
+.wishlist-icon.active {
+    color: red;
+    opacity: 1;
+}
+
+
+/* wishlist message */
+
+.wishlist-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.wishlist-message.added {
+    background-color: #4CAF50;
+}
+
+.wishlist-message.removed {
+    background-color: #f44336;
+}
+
+
+
+/* product detail pop up design */
+
+.product-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+}
+
+.product-popup-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Product image */
+.product-img {
+    width: 500px;
+    height: 300px;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Product title */
+#productDetails h2 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Product price */
+#productDetails p {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Add to Cart button */
+#productDetails button {
+    background-color: #ece4e0;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    display: block;
+    width: 300px;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+#productDetails button:hover {
+    background-color: #ab8776;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #ab8776;
+}
+
+/* Close button */
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #aaa;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .product-popup-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .product-img {
+        height: 250px;
+    }
+
+    #productDetails h2 {
+        font-size: 24px;
+    }
+
+    #productDetails p {
+        font-size: 20px;
+    }
+
+    #productDetails button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

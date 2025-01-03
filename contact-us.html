@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Jewel Box</title>
+    <link rel="stylesheet" href="contact-us.css">
+    <link rel="shortcut icon" href="1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <div id="signuppopup-placeholder"></div>
+    <div id="signinpopup-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar-placeholder").load("navbar.html", function () {
+                document.dispatchEvent(new Event('navbarLoaded'));
+            });
+            $("#signuppopup-placeholder").load("signup-popup.html");
+            $("#signinpopup-placeholder").load("signin-popup.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+    <main class="contactUs-container">
+        <h1>Contact Us</h1><br>
+        <p>If you have any questions, feel free to reach out to us using the form below.</p>
+
+        <form id="contactForm" class="contactUs-form">
+            <div class="form-row">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-row">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-row">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button class="button" type="submit">Send Message</button>
+        </form>
+    </main>
+
+
+    <script type="module" src="signup.js"></script>
+    <script src="contact-us.js"></script>
+    <script src="product.js"></script>
+    <script src="wishlist.js"></script>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.textContent = 'Message sent successfully.';
+            successMessage.style.cssText = 'position: fixed; top: 20px; right: 20px; background-color: #4CAF50; color: white; padding: 15px; border-radius: 5px; z-index: 1000;';
+            document.body.appendChild(successMessage);
+
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                document.body.removeChild(successMessage);
+            }, 5000);
+        })
+    </script>
+
+</body>
+
+</html>

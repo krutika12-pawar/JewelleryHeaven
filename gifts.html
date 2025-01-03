@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <div id="signuppopup-placeholder"></div>
+    <div id="signinpopup-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar-placeholder").load("navbar.html", function () {
+                document.dispatchEvent(new Event('navbarLoaded'));
+            });
+            $("#signuppopup-placeholder").load("signup-popup.html");
+            $("#signinpopup-placeholder").load("signin-popup.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+    <header class="product-collection">
+        <h1>Gifts for every Occassion</h1>
+        <p>Make Every Occasion Special with Our Gifts!</p>
+    </header>
+
+    <div class="collection-container">
+        <div class="collection-item" data-product-id="37">
+            <img src="anniversary gift.jpeg" alt="Anniversary Gift 1">
+            <h3>Heart with Infinity bracelet for anniversy</h3>
+            <p>Price: &pound;300</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="38">
+            <img src="Birthday Gift.avif" alt="Birthday Gift 1">
+            <h3>Ring for birthday</h3>
+            <p>Price: &pound;200</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="39">
+            <img src="christmas-lander-jewellery-desktop-1.jpeg" alt="Christmus Gift 1">
+            <h3>Pendant with matching ring and bracelet</h3>
+            <p>Price: &pound;500</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="40">
+            <img src="Mother-and-Baby.jpg" alt="Mothers Day Gift 1">
+            <h3>Mother and Baby Pendant</h3>
+            <p>Price: &pound;150</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="41">
+            <img src="valentine Day Gift.jpg" alt="Valentines Day Gift 1">
+            <h3>Heart Pendant</h3>
+            <p>Price: &pound;70</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="42">
+            <img src="Womens Day gift.jpg" alt="Womens Day Gift 1">
+            <h3>Diamond Necklace</h3>
+            <p>Price: &pound;300</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="productPopup" class="product-popup">
+        <div class="product-popup-content">
+            <span class="close">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="cart.js"></script>
+    <script src="product-detail.js"></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Collection</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="1.png">
+
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <div id="signuppopup-placeholder"></div>
+    <div id="signinpopup-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar-placeholder").load("navbar.html", function () {
+                document.dispatchEvent(new Event('navbarLoaded'));
+            });
+            $("#signuppopup-placeholder").load("signup-popup.html");
+            $("#signinpopup-placeholder").load("signin-popup.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+
+    <header class="product-collection">
+        <h1>Bangles Collection</h1>
+        <p>Unleash Your Inner Glam with Our Stunning Bangles</p>
+    </header>
+
+    <div class="collection-container">
+        <div class="collection-item" data-product-id="13">
+            <img src="designerbangles.webp" alt="Bangle 1">
+            <h3>Gold and diamond Bangle set</h3>
+            <p>Price: &pound;600</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="14">
+            <img src="diamond.jpg" alt="Bangle 2">
+            <h3>Diamond bangle set</h3>
+            <p>Price: &pound;800</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="15">
+            <img src="diamondbangle.jpg" alt="Bangle 3">
+            <h3>Diamond Kada</h3>
+            <p>Price: &pound;600</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="16">
+            <img src="diamondbangles.jpg" alt="Bangle 4">
+            <h3>Gold and Diamond stylish bangles</h3>
+            <p>Price: &pound;650</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="17">
+            <img src="diamondbracelet.jpg" alt="Bangle 5">
+            <h3>Modern bracelet bangle</h3>
+            <p>Price: &pound;300</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="18">
+            <img src="floraldesign.jpg" alt="Bangle 6">
+            <h3>Gold and Diamond floral bangle</h3>
+            <p>Price: &pound;340</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="productPopup" class="product-popup">
+        <div class="product-popup-content">
+            <span class="close">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="product-detail.js"></script>
+    <script src="cart.js"></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

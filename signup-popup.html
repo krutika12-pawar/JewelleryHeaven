@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="signup-popup.css">
+</head>
+
+<body>
+  <div id="popupContainer" class="signupPopup" style="display: none;">
+    <div class="popup-content">
+      <div class="popup-image">
+        <div class="form-content">
+          <span class="close" id="closePopup">&times;</span>
+          <div class="page_heading">
+            <h2>Signup with The Jewel Box</h2>
+            <p>Unlock best prices and become an insider<br> for our exclusive launches & offers.</p>
+          </div>
+          <form id="signupForm">
+            <div class="signup_container">
+              <div class="input-control">
+                <label>First Name</label>
+                <input type="text" name="first_name" id="first_name" placeholder="Enter your First name" maxlength="50"
+                  required>
+                <div class="error-message"></div>
+              </div>
+              <div class="input-control">
+                <label>Last Name</label>
+                <input type="text" name="last_name" id="last_name" placeholder="Enter your Last name" maxlength="50"
+                  required>
+                <div class="error-message"></div>
+              </div>
+              <div class="input-control">
+                <label>Phone Number</label>
+                <input type="tel" name="phone_number" id="phone_number" placeholder="Enter your Phone number"
+                  maxlength="10" required>
+                <div class="error-message"></div>
+              </div>
+              <div class="input-control">
+                <label>Email Address</label>
+                <input type="email" name="emailId" id="email_id" placeholder="Enter your Email address" required>
+                <div class="error-message"></div>
+              </div>
+              <div class="input-control">
+                <label>Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                <div class="error-message"></div>
+              </div>
+              <div class="input-control">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Re-enter password"
+                  required>
+                <div class="error-message"></div>
+              </div>
+            </div>
+            <div class="button-container">
+              <button type="submit" id="signup_button" class="submit_button">SIGN UP</button>
+            </div>
+            <div class="signin-option">
+              <p>OR</p>
+              <div class="google-signin">
+                <img class="google-icon" src="google.png">
+                <a href="https://myaccount.google.com/" target="_blank" class="google-signin">Sign in with your Google
+                  Account</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script type="module" src="signup.js"></script>
+
+</body>
+
+</html>

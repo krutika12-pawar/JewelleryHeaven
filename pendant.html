@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Collection</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="1.png">
+
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <div id="signuppopup-placeholder"></div>
+    <div id="signinpopup-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar-placeholder").load("navbar.html", function () {
+                document.dispatchEvent(new Event('navbarLoaded'));
+            });
+            $("#signuppopup-placeholder").load("signup-popup.html");
+            $("#signinpopup-placeholder").load("signin-popup.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+
+    <header class="product-collection">
+        <h1>Pendant Collection</h1>
+        <p>Dare to Dazzle: Stunning Pendants for Every Mood</p>
+    </header>
+
+    <div class="collection-container">
+        <div class="collection-item" data-product-id="25">
+            <img src="bappa.webp" alt="Pendant 1">
+            <h3>Bappa Pendant</h3>
+            <p>Price: &pound;800</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="26">
+            <img src="bluestone.avif" alt="Pendant 2">
+            <h3>Blue stone Pendant</h3>
+            <p>Price: &pound;600</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="27">
+            <img src="butterfly.png" alt="Pendant 3">
+            <h3>Butterfly Pendant</h3>
+            <p>Price: &pound;550</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="28">
+            <img src="diamondpendant.jpg" alt="Pendant 4">
+            <h3>Diamond Pendant</h3>
+            <p>Price: &pound;450</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="29">
+            <img src="goldpendant.jpg" alt="Pendant 5">
+            <h3>Gold Pendant</h3>
+            <p>Price: &pound;200</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="30">
+            <img src="goldrainbowstone.jpeg" alt="Pendant 6">
+            <h3>Gold and rainbow stone pendant</h3>
+            <p>Price: &pound;220</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="productPopup" class="product-popup">
+        <div class="product-popup-content">
+            <span class="close">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="cart.js"></script>
+    <script src="product-detail.js"></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Jewel Box - Jewellery Heaven</title>
+    <link rel="stylesheet" href="homePage.css">
+    <link rel="shortcut icon" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof updateWishlistCount === 'function' || typeof updateCartCount === 'function' || typeof logout === 'function') {
+            updateWishlistCount();
+            updateCartCount();
+            displayCartCount();
+        } else {
+            console.error('updateWishlistCount function not found');
+        }
+    });
+</script>
+
+<body>
+    <nav>
+        <div class="left-nav">
+            <div class="logo">
+                <img src="4.png" alt="Website Logo">
+            </div>
+            <div class="left-menu-list">
+                <ul id="menu-list">
+                    <li class="menu-item"><a href="homePage.html" class="nav-link">Home</a></li>
+                    <li class="menu-item>"><a href="bridal-collection.html" class="nav-link">Bridal Collection</a></li>
+                    <li class="menu-item"><a href="earrings.html" class="nav-link">Earrings</a></li>
+                    <li class="menu-item"><a href="rings.html" class="nav-link">Rings</a></li>
+                    <li class="menu-item"><a href="pendant.html" class="nav-link">Pendant</a></li>
+                    <li class="menu-item"><a href="bangles.html" class="nav-link">Bangles</a></li>
+                    <li class="menu-item"><a href="anklet.html" class="nav-link">Anklet</a></li>
+                    <li class="menu-item"><a href="gifts.html" class="nav-link">Gifts</a></li>
+                    <li class="menu-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-nav">
+            <input class="nav-search" aria-label="Search" id="search" type="text" placeholder="Search..."
+                onkeyup="searchContent()">
+            <a href="cart.html" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="navbarCartCount">0</span>
+            </a>
+            <a href="wishlist.html" aria-label="Wishlist">
+                <i class="fa-regular fa-heart"></i>
+                <span id="navbarWishlistCount">0</span>
+            </a>
+            <div class="user-profile">
+                <a class="userProfile" aria-label="User Profile">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <div class="profile-popup" id="button-container">
+                    <button id="signInButton">Sign In</button>
+                    <button id="signUpButton">Sign Up</button>
+                    <span id="userGreeting" style="display: none;">Hello, <span id="userName"></span></span>
+                    <button id="logoutButton" class="submit-button" style="display: none;"
+                        onclick="logout()">Logout</button>
+                </div>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="product-detail.js"></script>
+    <script type="module" src="signup.js"></script>
+    <script src="cart.js"></script>
+
+
+</body>
+
+</html>

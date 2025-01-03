@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rings</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <div id="signuppopup-placeholder"></div>
+    <div id="signinpopup-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar-placeholder").load("navbar.html", function () {
+                document.dispatchEvent(new Event('navbarLoaded'));
+            });
+            $("#signuppopup-placeholder").load("signup-popup.html");
+            $("#signinpopup-placeholder").load("signin-popup.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+    <!-- <div class="image-container">
+        <h1>Rings</h1>
+        <div class="gallery">
+            <div class="item">
+                <img src="images/rings/coupleBand.jpg" alt="ring1">
+                <p class="price">&pound;1500.45</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/rings.jpg" alt="ring2">
+                <p class="price">&pound;700</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/rings1.jpg" alt="ring3">
+                <p class="price">&pound;1300.22</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/weddingBand2.jpg" alt="ring4">
+                <p class="price">&pound;900</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="item">
+                <img src="images/rings/weddingBands.jpg" alt="ring5">
+                <p class="price">&pound;1999.99</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/Weddingcollection.jpg" alt="ring6">
+                <p class="price">&pound;2000.99</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/gold&diamond.jpg" alt="ring7">
+                <p class="price">&pound;600.45</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/gold&platinum.webp" alt="ring8">
+                <p class="price">&pound;2009.99</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="item">
+                <img src="images/rings/gold-ring.webp" alt="ring9">
+                <p class="price">&pound;999.99</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/heart-ring.avif" alt="ring10">
+                <p class="price">&pound;599.99</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/modern-ring.webp" alt="ring11">
+                <p class="price">&pound;1379.99</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/rosegold-ring.jpg" alt="ring12">
+                <p class="price">&pound;1050.99</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="item">
+                <img src="images/rings/twist-design.webp" alt="ring13">
+                <p class="price">&pound;1019.99</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/flower-ring.jpg" alt="ring14">
+                <p class="price">&pound;2499.99</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/goldring.webp" alt="ring15">
+                <p class="price">&pound;409.99</p>
+            </div>
+            <div class="item">
+                <img src="images/rings/red-stonering.jpg" alt="ring16">
+                <p class="price">&pound;2299.99</p>
+            </div>
+        </div>
+    </div> -->
+
+    <header class="product-collection">
+        <h1>Rings Collection</h1>
+        <p>Cherish Every Moment with Our Stunning Rings</p>
+    </header>
+
+    <div class="collection-container">
+        <div class="collection-item" data-product-id="31">
+            <img src="coupleBand.jpg" alt="Ring 1">
+            <h3>Engagement Ring</h3>
+            <p>Price: &pound;1,000</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="32">
+            <img src="couplering1.jpg" alt="Ring 2">
+            <h3>Platinum couple Band</h3>
+            <p>Price: &pound;800</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="33">
+            <img src="couplering2.jpg" alt="Ring 3">
+            <h3>Gold couple Band</h3>
+            <p>Price: &pound;600</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="34">
+            <img src="couplerings.jpg" alt="Ring 4">
+            <h3>Platinum Engagement Ring</h3>
+            <p>Price: &pound;950</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="35">
+            <img src="diamond and stone.jpg" alt="Ring 5">
+            <h3>Diamond and stone Ring</h3>
+            <p>Price: &pound;700</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="36">
+            <img src="flower-ring.jpg" alt="Ring 6">
+            <h3>Gold and Diamond Ring</h3>
+            <p>Price: &pound;1,000</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="productPopup" class="product-popup">
+        <div class="product-popup-content">
+            <span class="close">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="cart.js"></script>
+    <script src="product-detail.js"></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>
