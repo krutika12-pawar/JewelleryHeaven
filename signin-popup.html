@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup-popup.css">
+</head>
+
+<body>
+    <div id="signinPopupContainer" class="signinPopup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-image">
+                <span class="close" id="closeSigninPopup">&times;</span>
+                <div class="page_heading">
+                    <h2>Sign In with The Jewel Box</h2>
+                    <p id="signinMessage">Sign in and become a part of our luxurious community</p>
+                </div>
+                <form id="signinForm">
+                    <div class="signin_container">
+                        <div class="input-control">
+                            <input type="email" name="emailId" id="signin_email_id"
+                                placeholder="Enter your Email address" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="input-control">
+                            <input type="password" name="password" id="signin_password"
+                                placeholder="Enter your Password" required>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" id="signin_button" class="submit_button">SIGN IN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="signup.js"></script>
+
+</body>
+
+</html>

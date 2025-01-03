@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <div id="signuppopup-placeholder"></div>
+    <div id="signinpopup-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar-placeholder").load("navbar.html", function () {
+                document.dispatchEvent(new Event('navbarLoaded'));
+            });
+            $("#signuppopup-placeholder").load("signup-popup.html");
+            $("#signinpopup-placeholder").load("signin-popup.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+    <header class="product-collection">
+        <h1>Bridal Collection</h1>
+        <p>Discover our exquisite range of bridal jewelry designed to make your special day unforgettable</p>
+    </header>
+
+    <div class="collection-container">
+        <div class="collection-item" data-product-id="1" onclick="openProductPopup(this)">
+            <img src="AdstoneSet.jpg" alt="Bridal Ring 1">
+            <h3>Elegant AD stone Necklace Set</h3>
+            <p>Price: &pound;700</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="2">
+            <img src="bridal set1.jpg" alt="Bridal Necklace 1">
+            <h3>Classic Pearl Bridal Necklace Set</h3>
+            <p>Price: &pound;1,200</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="3">
+            <img src="bridal-collection2.jpg" alt="Bridal Earrings 1">
+            <h3>Stunning Gold Necklace and Earrings Set</h3>
+            <p>Price: &pound;1,100</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="4">
+            <img src="bridalBangleSet.jpg" alt="Bridal Bracelet 1">
+            <h3>Charming Bridal Bangle Set</h3>
+            <p>Price: &pound;150</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="5">
+            <img src="bridalEarring1.jpg" alt="Bridal Ring 2">
+            <h3>Vintage Style Earrings</h3>
+            <p>Price: &pound;70</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="6">
+            <img src="BridalnosePin.jpg" alt="Bridal Necklace 2">
+            <h3>Gold And Pearl Bridal Nosepin</h3>
+            <p>Price: &pound;300</p>
+            <div class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="productPopup" class="product-popup">
+        <div class="product-popup-content">
+            <span class="close">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="product-detail.js"></script>
+    <script src="cart.js"></script>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>
